@@ -18,8 +18,11 @@ More information about the [`ignore_errors`](/elixir/configuration/options.html#
 use Mix.Config
 
 config :appsignal, :config,
-  name: "appsignal_phoenix_example",
-  push_api_key: "00000000-0000-0000-0000-000000000000",
+  otp_app: :appsignal_phoenix_example,
+  name: "AppsignalPhoenixExample",
+  push_api_key: "your-push-api-key",
+  env: Mix.env,
+  active: true,
   ignore_errors: ["VerySpecificError", "AnotherError"]
 ```
 
