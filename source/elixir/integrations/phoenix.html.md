@@ -15,6 +15,7 @@ documentation][hex-appsignal].
 
 ## Table of Contents
 
+- [Getting started](#getting-started)
 - [Incoming HTTP requests](#incoming-http-requests)
 - [Template rendering](#template-rendering)
 - [Channels](#channels)
@@ -23,6 +24,32 @@ documentation][hex-appsignal].
 - [LiveView](#liveview)
 - [Instrumentation for custom Plugs](#instrumentation-for-included-plugs)
 - [Custom instrumentation](#custom-instrumentation)
+
+## Getting started
+
+Since version 2.0, the Phoenix integration is moved to a separate library named
+`:appsignal_phoenix`, which depends on the main `:appsignal` library. To use
+AppSignal in a Phoenix app, add `:appsignal_phoenix` to your dependencies. You
+can then remove the `:appsignal` dependency.
+
+```
+-beta.1
+{:appsignal_phoenix, "~> 2.0.0-beta.1"},
+defmodule AppsignalPhoenixExample.MixProject do
+  # ...
+
+  defp deps do
+    [
+      {:phoenix, "~> 1.5.3"},
+      # ...
+      {:appsignal, "~> 2.0.0"}
+    ]
+  end
+
+  # ...
+end
+
+```
 
 ## Incoming HTTP requests
 
