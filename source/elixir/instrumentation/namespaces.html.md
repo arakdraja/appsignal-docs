@@ -37,14 +37,14 @@ defmodule AppsignalPhoenixExampleWeb.AdminController do
   plug :set_namespace
 
   defp set_namespace(conn, _params) do
-    Appsignal.Transaction.set_namespace(:admin)
+    Appsignal.Span.set_namespace(Appsignal.Tracer.current_span(), "admin")
     conn
   end
 
   # ...
 ```
 
--> Note: When setting custom namespace we only accept letters and underscored for namespace names.
+-> Note: When setting custom namespace we only accept letters and underscores for namespace names.
 
 ## Ignore by namespace
 
