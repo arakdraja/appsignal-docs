@@ -18,9 +18,32 @@ documentation][hex-appsignal].
 
 ## Table of Contents
 
+- [Getting started](#getting-started)
 - [Incoming HTTP requests](#incoming-http-requests)
 - [Custom instrumentation](#custom-instrumentation)
 - [Instrumentation for included Plugs](#instrumentation-for-included-plugs)
+
+## Getting started
+
+Since version 2.0, the Plug integration is moved to a separate library named
+`:appsignal_plug`, which depends on the main `:appsignal` library. To use
+AppSignal in a Plug app, add `:appsignal_plug` to your dependencies. You
+can then remove the `:appsignal` dependency.
+
+``` elixir
+defmodule AppsignalPlugExample.MixProject do
+  # ...
+
+  defp deps do
+    [
+      {:plug_cowboy, "~> 2.0"},
+      {:appsignal_plug, "~> 2.0.0"}
+    ]
+  end
+
+  # ...
+end
+```
 
 ## Incoming HTTP requests
 
