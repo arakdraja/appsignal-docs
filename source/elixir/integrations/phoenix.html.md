@@ -32,9 +32,7 @@ Since version 2.0, the Phoenix integration is moved to a separate library named
 AppSignal in a Phoenix app, add `:appsignal_phoenix` to your dependencies. You
 can then remove the `:appsignal` dependency.
 
-```
--beta.1
-{:appsignal_phoenix, "~> 2.0.0-beta.1"},
+``` elixir
 defmodule AppsignalPhoenixExample.MixProject do
   # ...
 
@@ -48,7 +46,6 @@ defmodule AppsignalPhoenixExample.MixProject do
 
   # ...
 end
-
 ```
 
 ## Incoming HTTP requests
