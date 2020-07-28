@@ -40,7 +40,7 @@ defmodule AppsignalPhoenixExample.MixProject do
     [
       {:phoenix, "~> 1.5.3"},
       # ...
-      {:appsignal, "~> 2.0.0"}
+      {:appsignal_phoenix, "~> 2.0.0"}
     ]
   end
 
