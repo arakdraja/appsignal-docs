@@ -128,7 +128,9 @@
             <li>
               <a class="c-header-m-nav__link" href="https://appsignal.com/tour/<%= tour[:slug] %>">
                 <i class="c-header-m-nav__link__icon fa fa-fw <%= tour[:icon] %>"></i>
+              <span class="c-header-m-nav__link__title">
                 <%= tour[:title] %>
+              </span>
               </a>
             </li>
           <% end %>
@@ -139,7 +141,9 @@
             <li>
               <a class="c-header-m-nav__link" href="<%= platform[:link] %>">
                 <i class="c-header-m-nav__link__icon fa-fw <%= platform[:icon] %>"></i>
+              <span class="c-header-m-nav__link__title">
                 <%= platform[:name] %>
+              </span>
               </a>
             </li>
           <% end %>
@@ -149,7 +153,9 @@
           <li>
             <a class="c-header-m-nav__link" href="https://appsignal.com/pricing">
               <i class="c-header-m-nav__link__icon fa fa-fw fa-credit-card-blank"></i>
-              Pricing
+              <span class="c-header-m-nav__link__title">
+                Pricing
+              </span>
             </a>
           </li>
         </ul>
@@ -158,13 +164,17 @@
           <li>
             <a class="c-header-m-nav__link" href="http://docs.appsignal.com">
               <i class="c-header-m-nav__link__icon fa fa-fw fa-file"></i>
-              Documentation
+              <span class="c-header-m-nav__link__title">
+                Documentation
+              </span>
             </a>
           </li>
           <li>
             <a class="c-header-m-nav__link" href="http://blog.appsignal.com">
               <i class="c-header-m-nav__link__icon fa fa-fw fa-rss"></i>
-              Blog
+              <span class="c-header-m-nav__link__title">
+                Blog
+              </span>
             </a>
           </li>
         </ul>
